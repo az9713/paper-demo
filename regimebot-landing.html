@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RegimeBot — Markets have weather</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ponytail: one flat stylesheet mirroring the Paper canvas 1:1; no framework */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: #E7EBED; }
+  body {
+    width: 1440px; margin: 0 auto; background: #F3F5F6;
+    display: flex; flex-direction: column;
+    font-family: 'Inter', sans-serif; color: #142A38;
+  }
+  .nav { display: flex; justify-content: space-between; align-items: baseline; padding: 44px 96px 0 96px; }
+  .wordmark { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 500; }
+  .nav-links { display: flex; gap: 36px; }
+  .nav-links span { font-size: 13px; color: #56707E; }
+  .hero { padding: 128px 96px 0 96px; }
+  .hero h1 {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 68px; line-height: 74px; letter-spacing: -0.01em;
+    color: #142A38; max-width: 1150px;
+  }
+  .sub { padding: 32px 96px 0 96px; display: flex; flex-direction: column; gap: 40px; }
+  .sub p { font-size: 17px; line-height: 27px; color: #56707E; max-width: 560px; }
+  .cta-row { display: flex; align-items: center; gap: 28px; }
+  .btn {
+    display: flex; align-items: center; background: #0F3D5C; padding: 13px 24px;
+    border-radius: 2px; color: #fff; font-size: 13px; font-weight: 500; text-decoration: none;
+  }
+  .link { color: #0F3D5C; font-size: 13px; font-weight: 500; text-decoration: none; }
+  .strip-head { display: flex; justify-content: space-between; align-items: baseline; padding: 136px 96px 0 96px; }
+  .mono { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #56707E; }
+  .strip { display: flex; align-items: flex-end; gap: 2px; padding: 20px 96px 0 96px; position: relative; }
+  .seg { display: flex; flex-direction: column; gap: 12px; flex-basis: 0; }
+  .seg .bar { align-self: stretch; }
+  .seg .meta { display: flex; flex-direction: column; gap: 2px; }
+  .seg .label { font-size: 13px; font-weight: 500; }
+  .now-marker {
+    position: absolute; right: 96px; top: 4px;
+    display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+  }
+  .now-marker span { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E05B2B; }
+  .now-marker .tick { width: 2px; height: 60px; background: #E05B2B; }
+  .cols { display: flex; gap: 64px; padding: 128px 96px 0 96px; }
+  .col { display: flex; flex-direction: column; gap: 16px; flex: 1 0 0; border-top: 1px solid #C6D0D6; padding-top: 24px; }
+  .col h2 { font-size: 17px; font-weight: 500; color: #142A38; }
+  .col p { font-size: 17px; line-height: 27px; color: #56707E; }
+  .proof { display: flex; justify-content: space-between; align-items: baseline; padding: 120px 96px 48px 96px; }
+  footer { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #C6D0D6; padding: 28px 96px 64px 96px; }
+  footer .tagline { font-family: 'Newsreader', serif; font-style: italic; font-size: 13px; color: #56707E; }
+  footer .copy { font-size: 13px; color: #56707E; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="wordmark">RegimeBot</div>
+  <div class="nav-links"><span>Method</span><span>Performance</span><span>Docs</span></div>
+</div>
+
+<div class="hero">
+  <h1>Markets have weather.<br>Trade the season, not the storm.</h1>
+</div>
+
+<div class="sub">
+  <p>RegimeBot reads volatility, trend, and correlation to name the regime you are in &mdash; calm, swell, or storm &mdash; then sizes every position for it.</p>
+  <div class="cta-row">
+    <a class="btn" href="#">Read the method</a>
+    <a class="link" href="#">View live signals &rarr;</a>
+  </div>
+</div>
+
+<div class="strip-head">
+  <span class="mono">Regime read &mdash; S&amp;P 500, trailing 24 months</span>
+  <span class="mono">updated daily, 22:00 UTC</span>
+</div>
+
+<div class="strip">
+  <div class="seg" style="flex-grow:20"><div class="bar" style="height:34px;background:#CBD9E0"></div><div class="meta"><span class="label" style="color:#142A38">Calm</span><span class="mono">Aug 24 &ndash; Jan 25</span></div></div>
+  <div class="seg" style="flex-grow:14"><div class="bar" style="height:46px;background:#8FA9B8"></div><div class="meta"><span class="label" style="color:#142A38">Swell</span><span class="mono">Jan 25 &ndash; Apr 25</span></div></div>
+  <div class="seg" style="flex-grow:10"><div class="bar" style="height:72px;background:#0F3D5C"></div><div class="meta"><span class="label" style="color:#0F3D5C">Storm</span><span class="mono">Apr 25 &ndash; Jun 25</span></div></div>
+  <div class="seg" style="flex-grow:8"><div class="bar" style="height:28px;background:#E2E8EB"></div><div class="meta"><span class="label" style="color:#56707E">Fog</span><span class="mono">Jun&ndash;Aug 25</span></div></div>
+  <div class="seg" style="flex-grow:22"><div class="bar" style="height:34px;background:#CBD9E0"></div><div class="meta"><span class="label" style="color:#142A38">Calm</span><span class="mono">Aug 25 &ndash; Feb 26</span></div></div>
+  <div class="seg" style="flex-grow:16"><div class="bar" style="height:50px;background:#8FA9B8"></div><div class="meta"><span class="label" style="color:#142A38">Swell</span><span class="mono">Feb 26 &ndash; now</span></div></div>
+  <div class="now-marker"><span>now</span><div class="tick"></div></div>
+</div>
+
+<div class="cols">
+  <div class="col"><h2>Detect</h2><p>Volatility, trend, and cross-asset correlation are scored daily. When the mix shifts, the regime label shifts with it.</p></div>
+  <div class="col"><h2>Size</h2><p>Position size follows the regime, not a fixed rule. Storms trade small; calm seas carry more sail.</p></div>
+  <div class="col"><h2>Preserve</h2><p>The first job is surviving the drawdown you did not predict. Exits are decided before entry, every time.</p></div>
+</div>
+
+<div class="proof">
+  <span class="mono">Backtested 2011&ndash;2025 &middot; three asset classes</span>
+  <span class="mono">max drawdown &minus;11.4% vs &minus;33.9% buy-and-hold</span>
+</div>
+
+<footer>
+  <span class="tagline">RegimeBot &mdash; weather for markets.</span>
+  <span class="copy">&copy; 2026</span>
+</footer>
+
+</body>
+</html>
