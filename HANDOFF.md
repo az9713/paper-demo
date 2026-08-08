@@ -1,8 +1,14 @@
 # HANDOFF — resume point for paper_YC (Paper design experiments)
 
-**Read this first each new session.** No `CLAUDE.md` here; no git repo — durable state is these files plus project memory.
+**Read this first each new session.** No `CLAUDE.md` here. Git repo: https://github.com/az9713/paper-demo (this folder, branch `main`).
 
-## Current state (as of 2026-08-07)
+## Current state (as of 2026-08-07, session 2)
+- **Done:** "The Tactile Collection" (Paper Texture Gallery) — Neenah-style swatch wall, six SVG-textured paper stocks.
+  Live file: https://app.paper.design/file/01KZFRSRW9S9G8QY3EA8JSVDCF · write-up: `DEVELOPMENT-JOURNEY-2.md` · render: `paper-texture-gallery-canvas.png`.
+- **BLOCKED until ~2026-08-14:** Paper free plan hit its WEEKLY MCP call limit. Mutating calls fail; the gallery footer never landed. Details in `DEVELOPMENT-JOURNEY-2.md` §6.
+- **Done:** repo created and pushed via gh; `README.md` links both designs and the YC video.
+
+## Prior state (session 1)
 - **Done:** "RegimeBot Landing" designed in Paper (paper.design) and verified by screenshot.
   Live file: https://app.paper.design/file/01KZFQ0VWFCCX9Y39GDEJ7S0MQ (Simon's Team, free plan).
 - **Done:** standalone package `regimebot-landing.html` — same design as one self-contained HTML file (Google Fonts CDN only), verified pixel-faithful in Chrome.
