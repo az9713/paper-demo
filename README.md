@@ -20,6 +20,10 @@ A recreation of the feel of [Neenah's paper gallery](https://www.neenahpaper.com
 - Write-up: [`DEVELOPMENT-JOURNEY-2.md`](DEVELOPMENT-JOURNEY-2.md)
 - Render: `paper-texture-gallery-canvas.png`
 
+## The `dev-journey` skill
+
+The experience of writing these journey docs is distilled into a reusable Claude Code skill: [`skills/dev-journey/SKILL.md`](skills/dev-journey/SKILL.md). It defines the warts-and-all method — mine the live transcript before it is summarized away, quote the initial prompt verbatim, name the session's crux as its own section, and walk a completeness checklist that covers what nobody thinks to ask for: invisible constraints, near-misses, fragility and luck, costs and limits hit, human-in-the-loop moments, descoped work, and verification gaps. To install, copy the folder to `~/.claude/skills/dev-journey/`.
+
 ## Repo contents
 
 | File | What it is |
@@ -30,6 +34,7 @@ A recreation of the feel of [Neenah's paper gallery](https://www.neenahpaper.com
 | `*.png` / `*.jpg` | Canvas renders |
 | `transcript.txt` | The YC Design Review episode transcript (design-rule source) |
 | `HANDOFF.md` | Session resume point |
+| `skills/dev-journey/` | Reusable Claude Code skill for writing docs like these |
 
 ## Hard-won facts about Paper's MCP
 
